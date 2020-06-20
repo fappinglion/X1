@@ -8,6 +8,8 @@ import {
   TouchableOpacity,
   ScrollView,
 } from 'react-native';
+import navigator from './routes/HomeStack';
+
 
 
 export default class App extends Component {
@@ -25,76 +27,57 @@ render() {
                 <Text style={styles.ws}>
                     PROFILE
                 </Text>
-
                 <View style={styles.card}>
+                    
                     <Image source={require('D:/ReactNative/X1/images/ava.jpeg')} style={styles.img} />
-                    <TouchableOpacity onPress={this.onPressButton} >
-                        <Image source={require('D:/ReactNative/X1/images/edit.png')} style={styles.edit} />
+                    <TouchableOpacity onPress={this.onPressButton} style={styles.touch}>
+                        <Image source={require('D:/ReactNative/X1/images/edit.png')}  style={styles.edit}/>
                     </TouchableOpacity>
                     <Text style={styles.ts}>
-                        John Doe
+                        Neelesh RJha
                     </Text>
                     <Text style={styles.usr}>
-                        @johndoe123
+                        @neelesh123
                     </Text>
-                </View>
-            
+                </View>            
                 <View style={styles.bcg2}>
-                    
-                    <View style={styles.bcg2}>
+                     <View style={styles.bcg2}>
                     <TouchableOpacity onPress={this.onPressButton}>
-                        <Text style={styles.butn}>
-                            Dashboard
-                        </Text> 
-                        <Text style={styles.butn}>
-                            Payment History
-                        </Text>
-                        <Text style={styles.butn}>
-                            Statisitics
-                        </Text>
-                        <Text style={styles.butn}>
-                            Reward
-                        </Text>
-                        <Text style={styles.butn}>
-                            Logout
-                        </Text>
+                        <View style={{ flexDirection: 'row', }}>
+                        <Image source={require('D:/ReactNative/X1/images/dashboard.png')} style={styles.icons}/>
+                            <Text style={styles.butn}>
+                                Dashboard
+                            </Text> 
+                        </View>
+                        <View style={{ flexDirection: 'row', }}>
+                        <Image source={require('D:/ReactNative/X1/images/payment.png')} style={styles.icons}/>
+                            <Text style={styles.butn}>
+                                Payment History
+                            </Text>
+                        </View>
+                        <View style={{ flexDirection: 'row', }}>
+                        <Image source={require('D:/ReactNative/X1/images/stats.png')} style={styles.icons}/>
+                            <Text style={styles.butn}>
+                                Statisitics
+                            </Text>
+                        </View>
+                        <View style={{ flexDirection: 'row',  }}>
+                        <Image source={require('D:/ReactNative/X1/images/reward.png')} style={styles.icons}/>
+                            <Text style={styles.butn}>
+                                Reward
+                            </Text>
+                        </View>
+                        <View style={{ flexDirection: 'row',  }}>
+                        <Image source={require('D:/ReactNative/X1/images/logout.png')} style={styles.icons}/>
+                            <Text style={styles.butn}>
+                                Logout
+                            </Text>
+                        </View>
+                        
                     </TouchableOpacity>
-                    </View>
-                    {/* <View style={styles.bcg2}>
-                        <TouchableOpacity onPress={this.onPressButton}>
-                            <Text style={styles.butn}>
-                              Payment History
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.bcg2}>
-                        <TouchableOpacity onPress={this.onPressButton}>
-                            <Text style={styles.butn}>
-                              Statistics
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.bcg2}>
-                        <TouchableOpacity onPress={this.onPressButton}>
-                            <Text style={styles.butn}>
-                              Reward
-                            </Text>
-                        </TouchableOpacity>
-                    </View>
-                    <View style={styles.bcg2}>
-                        <TouchableOpacity onPress={this.onPressButton}>
-                            <Text style={styles.butn}>
-                              Logout
-                            </Text>
-                        </TouchableOpacity>
-                    </View> */}
-                    
+                    </View>                   
                 </View>
-            </View>
-            
-
-            
-            
+            </View>        
         </View>
     );
 }
@@ -186,21 +169,42 @@ const styles = StyleSheet.create({
     },
     
     butn: {
+        
         top:30,
-        fontSize:24,
+        fontSize:22,
         fontWeight:'bold',
         fontFamily: "sans-serif-condensed",
-        letterSpacing:3,
+        letterSpacing:2,
         borderWidth:15,
         borderColor: 'transparent',   
+        alignSelf:'flex-start',
+        left:50,
+        color:'#222f3e',
     },
 
     edit: {
         alignSelf: 'flex-end',
         height:20,
         width:20,
+        right:10,
+        
+        
+    },
+
+    touch: {
+        
+        alignSelf: 'flex-end',
+        height:20,
+        width:20,
         right:15,
         bottom:100,
-        
+    },
+
+    icons: {
+        height:60,
+        width:60,
+        alignSelf: 'flex-start',
+        left:18,
+        top: 17,
     },
 })
