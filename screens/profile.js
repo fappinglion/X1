@@ -1,32 +1,24 @@
 
-import React, { Component } from 'react';
+import React from 'react';
 import {
   StyleSheet,
   View,
   Text,
   Image,
   TouchableOpacity,
-  ScrollView,
+  Alert,
 } from 'react-native';
-import navigator from '../routes/HomeStack';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
+
+
+// onPressButton()
+// {
+//     alert('You tapped the button!')
+// }
 
 
 
 export default function Profile () {
-
-    onPressButton()
-    {
-        alert('You tapped the button!')
-    }
-
-    onPressNav = () => {
-        navigation.navigate('order')
-    }
-
-
-
+    
     return(
         <View style={styles.container}>
             <View style={styles.bcg}>
@@ -36,58 +28,59 @@ export default function Profile () {
 
                 <View style={styles.card}>
                     
-                    <Image source={require('D:/ReactNative/X1/images/ava.jpeg')} style={styles.img} />
-                    <TouchableOpacity onPress={this.onPressButton} style={styles.touch}>
-                        <Image source={require('D:/ReactNative/X1/images/edit.png')}  style={styles.edit}/>
+                    <Image source={require('../images/ava.jpeg')} style={styles.img} />
+                    <TouchableOpacity onPress={() => Alert.alert('Button pressed')} style={styles.touch}>
+                        <Image source={require('../images/edit.png')}  style={styles.edit}/>
                     </TouchableOpacity>
                     <Text style={styles.ts}>
-                        Neelesh RJha
+                        John Doe
                     </Text>
                     <Text style={styles.usr}>
-                        @neelesh123
+                        @johndoe
                     </Text>
                 </View>
             
                 <View style={styles.bcg2}>
                     
                      <View style={styles.bcg2}>
-                    <TouchableOpacity onPress={this.onPressButton}>
+                    <TouchableOpacity onPress={() => Alert.alert('Button pressed')}>
                         <View style={{ flexDirection: 'row', }}>
-                        <Image source={require('D:/ReactNative/X1/images/dashboard.png')} style={styles.icons}/>
+                        <Image source={require('../images/dashboard.png')} style={styles.icons}/>
                             <Text style={styles.butn}>
                                 Dashboard
                             </Text> 
                         </View>
                     </TouchableOpacity>
-                    <TouchableOpacity onPress={this.onPressButton}>
+                    <TouchableOpacity onPress={() => Alert.alert('Button pressed')}>
                         <View style={{ flexDirection: 'row', }}>
-                        <Image source={require('D:/ReactNative/X1/images/payment.png')} style={styles.icons}/>
+                        <Image source={require('../images/payment.png')} style={styles.icons}/>
                             <Text style={styles.butn}>
                                 Payment History
                             </Text>
                         </View>
+                    </TouchableOpacity>
                         <View style={{ flexDirection: 'row', }}>
-                        <Image source={require('D:/ReactNative/X1/images/stats.png')} style={styles.icons}/>
+                        <Image source={require('../images/stats.png')} style={styles.icons}/>
                             <Text style={styles.butn}>
                                 Statisitics
                             </Text>
                         </View>
                         <View style={{ flexDirection: 'row',  }}>
-                        <Image source={require('D:/ReactNative/X1/images/reward.png')} style={styles.icons}/>
+                        <Image source={require('../images/reward.png')} style={styles.icons}/>
                             <Text style={styles.butn}>
                                 Reward
                             </Text>
 
                         </View>
                         <View style={{ flexDirection: 'row',  }}>
-                        <Image source={require('D:/ReactNative/X1/images/logout.png')} style={styles.icons}/>
+                        <Image source={require('../images/logout.png')} style={styles.icons}/>
                             <Text style={styles.butn}>
                                 Logout
                             </Text>
 
                         </View>
                         
-                    </TouchableOpacity>
+                    
                     </View>                   
                 </View>
             </View>
@@ -100,9 +93,6 @@ export default function Profile () {
 }
 
 
-
-
-    
 
 const styles = StyleSheet.create({
   container: {
@@ -126,7 +116,7 @@ const styles = StyleSheet.create({
       justifyContent: 'center',
       textAlign: 'left',
       zIndex:1,
-      justifyContent: 'space-around',
+      
       
   },
 
