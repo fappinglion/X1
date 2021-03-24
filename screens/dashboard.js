@@ -42,7 +42,7 @@ export default function Dashboard ({ navigation }) {
                         <View style={{ flexDirection: 'row', }}>
                         <Image source={require('../images/dashboard.png')} style={styles.icons}/>
                             <Text style={styles.butn}>
-                                Dashboard
+                                Profile
                             </Text> 
                         </View>
                     </TouchableOpacity>
@@ -137,7 +137,7 @@ const styles = StyleSheet.create({
   card: { 
       flex:1,
       height:170,
-      width:370,
+      width:350,
       backgroundColor: '#ffffff',
       justifyContent: 'center',
       borderTopLeftRadius:25,
@@ -204,7 +204,7 @@ const styles = StyleSheet.create({
 
     icons: {
         height:60,
-        width:60,
+        width:80,
         alignSelf: 'flex-start',
         left:18,
         top: 17,

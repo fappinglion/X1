@@ -11,16 +11,29 @@ export default function Profile(){
             <View style={styles.bcg}>
                 <View style={styles.card}>
                     <Text style={styles.ts}>
-                        First Name : John
+                        First Name :
+                        <Text style={styles.ws}>
+                            John
+                        </Text>
+                    </Text>
+                    
+                    <Text style={styles.ts}>
+                        Last Name:
+                        <Text style={styles.ws}>
+                            Doe
+                        </Text>
                     </Text>
                     <Text style={styles.ts}>
-                        Last Name: Doe
+                        Age:
+                        <Text style={styles.ws}>
+                            85
+                        </Text>
                     </Text>
                     <Text style={styles.ts}>
-                        Age: 85
-                    </Text>
-                    <Text style={styles.ts}>
-                        Gender: Male
+                        Gender:
+                        <Text style={styles.ws}>
+                            Male
+                        </Text>
                     </Text>
                 </View>
             </View>
@@ -45,34 +58,21 @@ const styles = StyleSheet.create({
   
     },
   
-    bcg2: {
-        flex:2,      
-        
-        backgroundColor: '#f5f6fa',
-        justifyContent: 'center',
-        textAlign: 'left',
-        zIndex:1,
-        
-        
-    },
-  
     ts: {
         color: 'black',
-        justifyContent: 'center',
+        justifyContent: 'flex-start',
         fontSize: 28,
-        alignSelf: 'center',
+        alignSelf: 'flex-start',
         fontWeight: 'bold',
-  
+        padding: 15,
     },
     ws: {
-        color: 'white',
-        fontSize:20,
-        alignSelf: 'center',
-        justifyContent: 'center',
-        fontFamily: "sans-serif-condensed",
-        top:40,
-        letterSpacing:2,
-        
+        color: 'black',
+        justifyContent: 'flex-start',
+        fontSize: 25,
+        alignSelf: 'flex-start',
+        paddingLeft: 15,
+        fontWeight: 'normal',
     },
   
     card: { 
@@ -86,68 +86,13 @@ const styles = StyleSheet.create({
         borderBottomLeftRadius:25,
         borderBottomRightRadius:25,
         borderWidth:8,
-        borderBottomColor: 'transparent',
         borderColor: 'transparent',
         elevation: 10,
         alignSelf:'center',
         zIndex:2,
-        top:60,
-        
         
         },
-      img: {
-        height:100,
-        width:100,
-        alignSelf: 'center',
-        borderRadius:50,
-        borderWidth:5,
-        borderColor: '#c8cdd1',
-        top:15,
-      },
-      usr: {
-        alignSelf:'center',
-        fontWeight: 'bold',
-        color: '#8395a7',
-        fontSize: 14,
-      },
       
-      butn: {
-          
-          top:30,
-          fontSize:22,
-          fontWeight:'bold',
-          fontFamily: "sans-serif-condensed",
-          letterSpacing:2,
-          borderWidth:15,
-          borderColor: 'transparent',   
-          alignSelf:'flex-start',
-          left:50,
-          color:'#222f3e',
-      },
+      
   
-      edit: {
-          alignSelf: 'flex-end',
-          height:20,
-          width:20,
-          right:10,
-          
-          
-      },
-  
-      touch: {
-          
-          alignSelf: 'flex-end',
-          height:20,
-          width:20,
-          right:15,
-          bottom:100,
-      },
-  
-      icons: {
-          height:60,
-          width:60,
-          alignSelf: 'flex-start',
-          left:18,
-          top: 17,
-      },
 })
